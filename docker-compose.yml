@@ -1,0 +1,15 @@
+services:
+  CustomerDetails:
+    image: gauravpant734/customerdetails
+    ports:
+      - "9086:9086"
+    networks:
+      - store-network
+  onlineStore:
+    image: gauravpant734/onlineStore
+    ports:
+      - "9085:9085"
+    networks:
+      - store-network      
+networks:
+  store-network: {}
