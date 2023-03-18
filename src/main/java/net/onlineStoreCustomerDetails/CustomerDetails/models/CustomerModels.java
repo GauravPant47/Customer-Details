@@ -2,15 +2,43 @@ package net.onlineStoreCustomerDetails.CustomerDetails.models;
 
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "customer")
 public class CustomerModels {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "customer_id")
 	private int customerId;
+	
+	@Column(name = "customer_name")
 	private String customerName;
+	
+	@Column(name = "mobile_number")
 	private Long mobileNumber;
+	
+	@Column(name = "date_of_birth")
 	private Date dateOfBirth;
+	
+	@Column(name = "email_id")
 	private String emailId;
+	
+	@Column(name = "address")
 	private String address;
+	
+	@Column(name = "city")
 	private String city;
+	
+	@Column(name = "State")
 	private String State;
+	
+	@Column(name = "pincode")
 	private long pincode;
 	public int getCustomerId() {
 		return customerId;
