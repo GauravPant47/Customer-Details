@@ -6,7 +6,7 @@ services:
     networks:
       - store-network
   onlineStore:
-    image: gauravpant734/onlineStore
+    image: gauravpant734/onlinestore
     ports:
       - "9085:9085"
     networks:
