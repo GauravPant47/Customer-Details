@@ -25,8 +25,8 @@ public class CustomerController {
 	}
 	@PostMapping("/customerdata")
 	public List<CustomerModels> getaCustomerDetals(@RequestBody CustomerModels customerModels){
-		List<CustomerModels> cusModel = customerRepository.findByCustomerId(customerModels.getCustomerId());
-		return cusModel;
+		List<CustomerModels> cusmd = customerRepository.findByCustomerId(customerModels.getCustomerId());
+		return cusmd;
 	}
 	
 }
